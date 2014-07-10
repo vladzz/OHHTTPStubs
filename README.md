@@ -85,7 +85,7 @@ _As far as I know, there's nothing we can do about those two limitations. Please
 **The recommanded way to use `OHHTTPStubs` is via [CocoaPods](http://cocoapods.org/)**.
 Simply add `pod 'OHHTTPStubs'` to your `Podfile` then run `pod install` and you are ready to use it.
 
-_Note: `OHHTTPStubs` requires iOS5 minimum._
+_Note: `OHHTTPStubs` requires iOS6 minimum._
 
 > **Warning: Be careful anyway to include `OHHTTPStubs` only in your test targets, or only use it in `#if DEBUG` portions, if you don't want your stubs to still be included in your release for the AppStore!**
 
