@@ -35,7 +35,7 @@ It works with `NSURLConnection`, new iOS7/OSX.9's `NSURLSession`, `AFNetworking`
     }];
 
 ### [More examples](https://github.com/AliSoftware/OHHTTPStubs/wiki/Usage-Examples)
-    
+
 For a lot more examples, see the dedicated "[Usage Examples](https://github.com/AliSoftware/OHHTTPStubs/wiki/Usage-Examples)" wiki page.
 
 ### [Help Topics](https://github.com/AliSoftware/OHHTTPStubs/wiki)
@@ -44,7 +44,7 @@ The wiki also contain [some articles that can help you get started](https://gith
 
 # Compatibility
 
-`OHHTTPStubs` is compatible with **iOS 5.0+** and **OSX 10.7+**.
+`OHHTTPStubs` is compatible with **iOS 6.0+** and **OSX 10.7+**.
 
 `OHHTTPStubs` also works with iOS7's and OSX 10.9's `NSURLSession` mechanism.
 

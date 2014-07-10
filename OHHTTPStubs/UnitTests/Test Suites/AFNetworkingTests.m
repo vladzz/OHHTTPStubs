@@ -26,10 +26,15 @@
 #import "AsyncSenTestCase.h"
 #import "OHHTTPStubs.h"
 #import "OHHTTPStubsResponse+JSON.h"
+#import "OHHTTPStubsXCTestLog.h"
 
 #import "AFHTTPRequestOperation.h"
 
-@interface AFNetworkingTests : AsyncSenTestCase @end
+@interface AFNetworkingTests : AsyncSenTestCase
+{
+    OHHTTPStubsXCTestLog *_logger;
+}
+@end
 
 @implementation AFNetworkingTests
 
@@ -37,6 +42,7 @@
 {
     [super setUp];
     [OHHTTPStubs removeAllStubs];
+    _logger = [[OHHTTPStubsXCTestLog alloc] init];
 }
 
 -(void)test_AFHTTPRequestOperation
@@ -59,14 +65,14 @@
         response = responseObject; // keep strong reference
         [self notifyAsyncOperationDone];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        STFail(@"Unexpected network failure");
+        XCTFail(@"Unexpected network failure");
         [self notifyAsyncOperationDone];
     }];
     [op start];
     
     [self waitForAsyncOperationWithTimeout:kRequestTime+kResponseTime+0.5];
     
-    STAssertEqualObjects(response, expectedResponse, @"Unexpected data received");
+    XCTAssertEqualObjects(response, expectedResponse, @"Unexpected data received");
 }
 @end
 
@@ -110,17 +116,17 @@
                         [self notifyAsyncOperationDone];
                     }
                     failure:^(NSURLSessionDataTask *task, NSError *error) {
-                        STFail(@"Unexpected network failure");
+                        XCTFail(@"Unexpected network failure");
                         [self notifyAsyncOperationDone];
                     }];
         
         [self waitForAsyncOperationWithTimeout:kRequestTime+kResponseTime+0.5];
         
-        STAssertEqualObjects(response, expectedResponseDict, @"Unexpected data received");
+        XCTAssertEqualObjects(response, expectedResponseDict, @"Unexpected data received");
     }
     else
     {
-        [SenTestLog testLogWithFormat:@"/!\\ Test skipped because the NSURLSession class is not available on this OS version. Run the tests a target with a more recent OS.\n"];
+        [_logger testLogWithFormat:@"/!\\ Test skipped because the NSURLSession class is not available on this OS version. Run the tests a target with a more recent OS.\n"];
     }
 }
 

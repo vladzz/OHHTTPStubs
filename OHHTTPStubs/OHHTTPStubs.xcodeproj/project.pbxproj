@@ -14,7 +14,6 @@
 		0979359C161B62C0006DB5D5 /* OHHTTPStubsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0979359A161B62C0006DB5D5 /* OHHTTPStubsResponse.m */; };
 		09804E4E16A8D60A00ADC660 /* OHHTTPStubs.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09793597161B62C0006DB5D5 /* OHHTTPStubs.h */; };
 		09804E4F16A8D60A00ADC660 /* OHHTTPStubsResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09793599161B62C0006DB5D5 /* OHHTTPStubsResponse.h */; };
-		098368D0168FC7920082B1A4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098368CF168FC7920082B1A4 /* SenTestingKit.framework */; };
 		098368D3168FC7920082B1A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0979357C161B6251006DB5D5 /* Foundation.framework */; };
 		098368DC168FC7920082B1A4 /* AsyncSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 098368DB168FC7920082B1A4 /* AsyncSenTestCase.m */; };
 		098368E4168FD0E50082B1A4 /* NSURLConnectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 098368E3168FD0E50082B1A4 /* NSURLConnectionTests.m */; };
@@ -38,13 +37,15 @@
 		09D56E771915163C00C7A0FB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D56E761915163C00C7A0FB /* MobileCoreServices.framework */; };
 		09D56E79191516AF00C7A0FB /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D56E78191516AF00C7A0FB /* CoreServices.framework */; };
 		09D888241808BDA6002D3697 /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D888231808BDA6002D3697 /* OHHTTPStubs+NSURLSessionConfiguration.m */; };
+		1C286D99196E3CEB003F7A46 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CE42FA184CD21D00484665 /* XCTest.framework */; };
+		1C286D9A196E423A003F7A46 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CE42FA184CD21D00484665 /* XCTest.framework */; };
+		1C286D9D196E6D38003F7A46 /* OHHTTPStubsXCTestLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C286D9C196E6D38003F7A46 /* OHHTTPStubsXCTestLog.m */; };
 		27CE42FF184CD21D00484665 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CE42E4184CD21D00484665 /* OHHTTPStubs.framework */; };
 		27CE430E184CD36900484665 /* OHHTTPStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 09793598161B62C0006DB5D5 /* OHHTTPStubs.m */; };
 		27CE430F184CD36900484665 /* OHHTTPStubsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0979359A161B62C0006DB5D5 /* OHHTTPStubsResponse.m */; };
 		27CE4310184CD36900484665 /* OHHTTPStubsResponse+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 099B95DA17D3E38E0023F9BD /* OHHTTPStubsResponse+JSON.m */; };
 		27CE4311184CD36900484665 /* OHHTTPStubsResponse+HTTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 099B95DE17D3E3D00023F9BD /* OHHTTPStubsResponse+HTTPMessage.m */; };
 		27CE4312184CD36900484665 /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D888231808BDA6002D3697 /* OHHTTPStubs+NSURLSessionConfiguration.m */; };
-		27CE4314184CD75200484665 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098368CF168FC7920082B1A4 /* SenTestingKit.framework */; };
 		27CE4315184CD7D400484665 /* NSURLConnectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 098368E3168FD0E50082B1A4 /* NSURLConnectionTests.m */; };
 		27CE4316184CD7D400484665 /* NSURLConnectionDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 098368E9168FF9740082B1A4 /* NSURLConnectionDelegateTests.m */; };
 		27CE4317184CD7D400484665 /* WithContentsOfURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 098368EB169000340082B1A4 /* WithContentsOfURLTests.m */; };
@@ -102,8 +103,7 @@
 		09793598161B62C0006DB5D5 /* OHHTTPStubs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHTTPStubs.m; sourceTree = "<group>"; };
 		09793599161B62C0006DB5D5 /* OHHTTPStubsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHTTPStubsResponse.h; sourceTree = "<group>"; };
 		0979359A161B62C0006DB5D5 /* OHHTTPStubsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHTTPStubsResponse.m; sourceTree = "<group>"; };
-		098368CE168FC7920082B1A4 /* OHHTTPStubs iOS Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OHHTTPStubs iOS Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		098368CF168FC7920082B1A4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		098368CE168FC7920082B1A4 /* OHHTTPStubs iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OHHTTPStubs iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		098368D6168FC7920082B1A4 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		098368DA168FC7920082B1A4 /* AsyncSenTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsyncSenTestCase.h; sourceTree = "<group>"; };
 		098368DB168FC7920082B1A4 /* AsyncSenTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsyncSenTestCase.m; sourceTree = "<group>"; };
@@ -124,12 +124,14 @@
 		09D56E761915163C00C7A0FB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		09D56E78191516AF00C7A0FB /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		09D888231808BDA6002D3697 /* OHHTTPStubs+NSURLSessionConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OHHTTPStubs+NSURLSessionConfiguration.m"; sourceTree = "<group>"; };
+		1C286D9B196E6D38003F7A46 /* OHHTTPStubsXCTestLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHTTPStubsXCTestLog.h; sourceTree = "<group>"; };
+		1C286D9C196E6D38003F7A46 /* OHHTTPStubsXCTestLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHTTPStubsXCTestLog.m; sourceTree = "<group>"; };
 		27CE42E4184CD21D00484665 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OHHTTPStubs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CE42E5184CD21D00484665 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		27CE42E8184CD21D00484665 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27CE42E9184CD21D00484665 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		27CE42EA184CD21D00484665 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		27CE42F9184CD21D00484665 /* OHHTTPStubs Mac Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OHHTTPStubs Mac Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27CE42F9184CD21D00484665 /* OHHTTPStubs Mac Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OHHTTPStubs Mac Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CE42FA184CD21D00484665 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		27CE4330184CD9DD00484665 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		27CE4332184CD9EB00484665 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
@@ -172,13 +174,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C286D99196E3CEB003F7A46 /* XCTest.framework in Frameworks */,
 				09D56E771915163C00C7A0FB /* MobileCoreServices.framework in Frameworks */,
 				098368D3168FC7920082B1A4 /* Foundation.framework in Frameworks */,
 				9A59C9A517FCBCC700890679 /* SystemConfiguration.framework in Frameworks */,
 				09BEF7C917DFF68100B096F3 /* Security.framework in Frameworks */,
 				099C735716903B9800239880 /* UIKit.framework in Frameworks */,
 				098368E8168FE49A0082B1A4 /* libOHHTTPStubs.a in Frameworks */,
-				098368D0168FC7920082B1A4 /* SenTestingKit.framework in Frameworks */,
 				09C91207185E2F2300A41694 /* CFNetwork.framework in Frameworks */,
 				09C91209185E2F4600A41694 /* CoreGraphics.framework in Frameworks */,
 			);
@@ -197,13 +199,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C286D9A196E423A003F7A46 /* XCTest.framework in Frameworks */,
 				09D56E79191516AF00C7A0FB /* CoreServices.framework in Frameworks */,
 				09C911FD185E2DB400A41694 /* Foundation.framework in Frameworks */,
 				09C91204185E2EB300A41694 /* SystemConfiguration.framework in Frameworks */,
 				09C91205185E2EBC00A41694 /* Security.framework in Frameworks */,
 				09C91203185E2EA800A41694 /* Cocoa.framework in Frameworks */,
 				27CE42FF184CD21D00484665 /* OHHTTPStubs.framework in Frameworks */,
-				27CE4314184CD75200484665 /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,9 +234,9 @@
 			isa = PBXGroup;
 			children = (
 				09793579161B6251006DB5D5 /* libOHHTTPStubs.a */,
-				098368CE168FC7920082B1A4 /* OHHTTPStubs iOS Tests.octest */,
+				098368CE168FC7920082B1A4 /* OHHTTPStubs iOS Tests.xctest */,
 				27CE42E4184CD21D00484665 /* OHHTTPStubs.framework */,
-				27CE42F9184CD21D00484665 /* OHHTTPStubs Mac Tests.octest */,
+				27CE42F9184CD21D00484665 /* OHHTTPStubs Mac Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,7 +257,6 @@
 				0984831617805538002A99FF /* CFNetwork.framework */,
 				0979357C161B6251006DB5D5 /* Foundation.framework */,
 				27CE42E5184CD21D00484665 /* Cocoa.framework */,
-				27CE42FA184CD21D00484665 /* XCTest.framework */,
 				27CE42E7184CD21D00484665 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -278,6 +279,8 @@
 			children = (
 				9A59C98517FCBC4E00890679 /* AFNetworking */,
 				098368E5168FD0FF0082B1A4 /* Test Suites */,
+				1C286D9B196E6D38003F7A46 /* OHHTTPStubsXCTestLog.h */,
+				1C286D9C196E6D38003F7A46 /* OHHTTPStubsXCTestLog.m */,
 				098368DA168FC7920082B1A4 /* AsyncSenTestCase.h */,
 				098368DB168FC7920082B1A4 /* AsyncSenTestCase.m */,
 				098368D5168FC7920082B1A4 /* Supporting Files */,
@@ -290,8 +293,8 @@
 			children = (
 				098368D6168FC7920082B1A4 /* UnitTests-Info.plist */,
 				098368DD168FC7920082B1A4 /* UnitTests-Prefix.pch */,
+				27CE42FA184CD21D00484665 /* XCTest.framework */,
 				099C735616903B9800239880 /* UIKit.framework */,
-				098368CF168FC7920082B1A4 /* SenTestingKit.framework */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -405,7 +408,7 @@
 			);
 			name = "OHHTTPStubs iOS Tests";
 			productName = "OHHTTPStubs Unit Tests";
-			productReference = 098368CE168FC7920082B1A4 /* OHHTTPStubs iOS Tests.octest */;
+			productReference = 098368CE168FC7920082B1A4 /* OHHTTPStubs iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle";
 		};
 		27CE42E3184CD21D00484665 /* OHHTTPStubs Mac */ = {
@@ -440,7 +443,7 @@
 			);
 			name = "OHHTTPStubs Mac Tests";
 			productName = OHHTTPStubsMacTests;
-			productReference = 27CE42F9184CD21D00484665 /* OHHTTPStubs Mac Tests.octest */;
+			productReference = 27CE42F9184CD21D00484665 /* OHHTTPStubs Mac Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -556,6 +559,7 @@
 				9A59C9A117FCBC4E00890679 /* AFURLSessionManager.m in Sources */,
 				9A59C99B17FCBC4E00890679 /* AFHTTPSessionManager.m in Sources */,
 				9A59C99C17FCBC4E00890679 /* AFNetworkReachabilityManager.m in Sources */,
+				1C286D9D196E6D38003F7A46 /* OHHTTPStubsXCTestLog.m in Sources */,
 				9A59C99A17FCBC4E00890679 /* AFHTTPRequestOperationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -675,14 +679,16 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnitTests/UnitTests-Prefix.pch";
 				INFOPLIST_FILE = "UnitTests/UnitTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
@@ -693,14 +699,16 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnitTests/UnitTests-Prefix.pch";
 				INFOPLIST_FILE = "UnitTests/UnitTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -806,7 +814,7 @@
 				SDKROOT = macosx;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALID_ARCHS = x86_64;
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
@@ -844,7 +852,7 @@
 				SDKROOT = macosx;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALID_ARCHS = x86_64;
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
