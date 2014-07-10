@@ -100,6 +100,8 @@ If you want to be able to run `OHHTTPStubs`' Unit Tests, be sure you cloned the 
 
 This submodule is only useful for `OHHTTPStubs`' own Unit Tests, that are testing its usage with `AFNetworking`: **you don't need the submodule to use `OHHTTPStubs`** and `OHHTTPStubs` has no dependency on `AFNetworking` itself.
 
+**As the Unit tests have been upgraded to XCTest they only run on iOS7 and above now**
+
 **Every contribution to add more unit tests is welcome!**
 
 
