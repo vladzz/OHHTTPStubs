@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27CE42F8184CD21D00484665"
-               BuildableName = "OHHTTPStubs Mac Tests.octest"
+               BuildableName = "OHHTTPStubs Mac Tests.xctest"
                BlueprintName = "OHHTTPStubs Mac Tests"
                ReferencedContainer = "container:OHHTTPStubs.xcodeproj">
             </BuildableReference>
@@ -47,7 +47,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27CE42F8184CD21D00484665"
-               BuildableName = "OHHTTPStubs Mac Tests.octest"
+               BuildableName = "OHHTTPStubs Mac Tests.xctest"
                BlueprintName = "OHHTTPStubs Mac Tests"
                ReferencedContainer = "container:OHHTTPStubs.xcodeproj">
             </BuildableReference>
