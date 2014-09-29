@@ -22,19 +22,13 @@
  *
  ***********************************************************************************/
 
-
-#import "AsyncSenTestCase.h"
+#import <XCTest/XCTest.h>
 #import "OHHTTPStubs.h"
 #import "OHHTTPStubsResponse+JSON.h"
-#import "OHHTTPStubsXCTestLog.h"
 
 #import "AFHTTPRequestOperation.h"
 
-@interface AFNetworkingTests : AsyncSenTestCase
-{
-    OHHTTPStubsXCTestLog *_logger;
-}
-@end
+@interface AFNetworkingTests : XCTestCase @end
 
 @implementation AFNetworkingTests
 
@@ -42,7 +36,6 @@
 {
     [super setUp];
     [OHHTTPStubs removeAllStubs];
-    _logger = [[OHHTTPStubsXCTestLog alloc] init];
 }
 
 -(void)test_AFHTTPRequestOperation
@@ -57,20 +50,22 @@
                 requestTime:kRequestTime responseTime:kResponseTime];
     }];
     
+    XCTestExpectation* expectation = [self expectationWithDescription:@"AFHTTPRequestOperation request finished"];
+    
     NSURLRequest* req = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.iana.org/domains/example/"]];
     AFHTTPRequestOperation* op = [[AFHTTPRequestOperation alloc] initWithRequest:req];
     [op setResponseSerializer:[AFHTTPResponseSerializer serializer]];
     __block __strong id response = nil;
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         response = responseObject; // keep strong reference
-        [self notifyAsyncOperationDone];
+        [expectation fulfill];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         XCTFail(@"Unexpected network failure");
-        [self notifyAsyncOperationDone];
+        [expectation fulfill];
     }];
     [op start];
     
-    [self waitForAsyncOperationWithTimeout:kRequestTime+kResponseTime+0.5];
+    [self waitForExpectationsWithTimeout:kRequestTime+kResponseTime+0.5 handler:nil];
     
     XCTAssertEqualObjects(response, expectedResponse, @"Unexpected data received");
 }
@@ -105,6 +100,8 @@
                     requestTime:kRequestTime responseTime:kResponseTime];
         }];
         
+        XCTestExpectation* expectation = [self expectationWithDescription:@"AFHTTPSessionManager request finished"];
+        
         NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
         AFHTTPSessionManager *sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:nil sessionConfiguration:sessionConfig];
         
@@ -113,20 +110,20 @@
                  parameters:nil
                     success:^(NSURLSessionDataTask *task, id responseObject) {
                         response = responseObject; // keep strong reference
-                        [self notifyAsyncOperationDone];
+                        [expectation fulfill];
                     }
                     failure:^(NSURLSessionDataTask *task, NSError *error) {
                         XCTFail(@"Unexpected network failure");
-                        [self notifyAsyncOperationDone];
+                        [expectation fulfill];
                     }];
         
-        [self waitForAsyncOperationWithTimeout:kRequestTime+kResponseTime+0.5];
+        [self waitForExpectationsWithTimeout:kRequestTime+kResponseTime+0.5 handler:nil];
         
         XCTAssertEqualObjects(response, expectedResponseDict, @"Unexpected data received");
     }
     else
     {
-        [_logger testLogWithFormat:@"/!\\ Test skipped because the NSURLSession class is not available on this OS version. Run the tests a target with a more recent OS.\n"];
+        NSLog(@"/!\\ Test skipped because the NSURLSession class is not available on this OS version. Run the tests a target with a more recent OS.\n");
     }
 }
 
